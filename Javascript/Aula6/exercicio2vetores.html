@@ -1,0 +1,51 @@
+<!--
+- Criar vetores de 6 alocações.
+- Gerar valores aleatórios entre 1 e 6.
+- Comparar respectivas posições de vetores as igualdades
+-->
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<p id="lousa1"></p>
+	<p id="lousa2"></p>
+	<p id="lousa3"></p>
+	<p id="lousa4"></p>
+	<button onclick="compvetores()">Comparar novo vetor</button>
+<script>
+	function compvetores() {
+		vetor1 = new Array(6);
+		vetor2 = new Array(6);
+		var i = 0;
+		var rep = 0;
+		while (i < 6) {
+			var x = Math.floor((Math.random() * 6) + 1);
+			vetor1[i] = x;
+			i++;
+		}
+		i = 0;
+		while (i < 6) {
+			var x = Math.floor((Math.random() * 6) + 1);
+			vetor2[i] = x;
+			i++;
+		}
+		//MOSTRAR VETORES
+		document.getElementById("lousa1").innerHTML = vetor1 + ".";
+		document.getElementById("lousa2").innerHTML = vetor2 + ".";
+		//COMPARAÇÕES
+		var comparacao = "";
+		for (i = 0; i < 6; i += 1) {
+			if (vetor1[i] == vetor2[i]) {
+				var pos = i + 1
+				comparacao +=  "Os valores das posições " + pos + " dos vetores é igual<br>";
+				//document.getElementById("lousa3").innerHTML = comparacao; DENTRO DO FOR ESTAVA DANDO PROBLEMA
+				rep += 1;
+			}
+		}
+		document.getElementById("lousa3").innerHTML = comparacao;
+		document.getElementById("lousa4").innerHTML = "Total de repetições: " + rep;
+	}
+</script>
+</body>
+</html>

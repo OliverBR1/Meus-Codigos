@@ -1,0 +1,55 @@
+import math
+print("folha salarial")
+
+cont1 = 0
+cont2 = 0
+cont5 = 0
+cont10 = 0
+cont20 = 0
+cont50 = 0
+cont100 = 0
+cont200 = 0
+totsalario = 0
+
+identificacao = int(input("Numero de identificação  "))
+while (identificacao != 0):
+  quantidadehoras = float(input("Horas trabalhadas  "))
+  salariohora = float(input("Salario hora  "))
+  salario = quantidadehoras * salariohora
+  totsalario = totsalario + salario
+
+  cont200 = cont200 + math.floor(salario/200)
+  salario = salario % 200
+
+  cont100 = cont100 + math.floor(salario/100)
+  salario = salario % 100
+
+  cont50 = cont50 + math.floor(salario/50)
+  salario = salario % 50
+
+  cont20 = cont20 + math.floor(salario/20)
+  salario = salario % 20
+
+  cont10 = cont10 + math.floor(salario/10)
+  salario = salario % 10    
+
+  cont5 = cont5 + math.floor(salario/5)
+  salario = salario % 5
+
+  cont2 = cont2 + math.floor(salario/2)
+  salario = salario % 2
+
+  cont1 = cont1 + math.floor(salario/1)
+  salario = salario % 1
+
+  identificacao = int(input("Numero de identificação  "))
+
+print("Salarios Acumulados R$", totsalario)
+print("Notas de 200  ", cont200)
+print("Notas de 100  ", cont100)
+print("Notas de 50  ", cont50)
+print("Notas de 20  ", cont20)
+print("Notas de 10  ", cont10)
+print("Notas de 5  ", cont5)
+print("Notas de 2  ", cont2)
+print("Notas de 1  ", cont1)

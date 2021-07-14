@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href=".css">
+<meta charset="utf-8">
+</head>
+<body>
+<p> Enter com número e clique ok:</p>
+Valor 1 <input id="id1"><br>
+<button id="bt1" onclick="teste()">Ok</button>
+<p id="demo"></p>
+<script>
+function teste(){
+var a=math.floor(document.getElementByid("id1").value);
+if(a>10)
+{
+document.getElementByid("demo").innerHTML="SUPER SEI LA";
+}
+else
+{
+document.getElementByid("demo").innerHTML="SEI LA";
+}
+}
+</script>
+</body>
+</html>

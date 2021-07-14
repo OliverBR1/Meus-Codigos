@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Cavalos</title>
+		<script type="text/javascript">
+			function calcular(){
+			   var massa = parseFloat(document.getElementById("campoMassa").value);
+			   var altura = parseFloat(document.getElementById("campoAltura").value);
+			   var tempo = parseFloat(document.getElementById("campoTempo").value);
+			   var cavalos = massa * altura / tempo / 745.6999;
+			   document.getElementById("msg").innerHTML=
+			   "Serão necessários " + cavalos + " cavalos!";
+
+			}
+			
+			function limpar(){
+			   document.getElementById("msg").innerHTML=null;
+			}
+			
+		</script>
+	</head>
+	<body>
+	<h1>Quantos Cavalos?</h1>
+	<form>
+		<table border="1">
+			<tr>
+				<td>Massa</td>
+				<td><input type="text" id="campoMassa"></td>
+			</tr>
+			<tr>
+				<td>Altura</td>
+				<td><input type="text" id="campoAltura"></td>
+			</tr>
+			<tr>
+				<td>Tempo</td>
+				<td><input type="text" id="campoTempo"></td>
+			</tr>
+		</table>
+		<input type="button" value="Calcular" onclick="calcular()">
+		<input type="reset" value="Limpar" onclick="limpar()">
+	</form>
+	
+	<span id="msg"></span>
+	</body>
+</html>

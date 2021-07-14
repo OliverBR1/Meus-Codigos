@@ -1,0 +1,85 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	</head>
+<body>
+<h2> Sena </h2><br>
+<button id="bt1" onclick="myFunction()">OK</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+	function myFunction()
+{
+	var i,j;
+	var imax = 10;
+	var jmax = 6;
+	var aaa=0;
+	var G =new Array ();
+	
+		for(i=0;i<imax;i++) 
+{
+	G[i]=new Array();
+	
+		for(j=0;j<jmax; j++)
+{
+	aaa = Math.floor((Math.random()*60) +1);
+	G[i][j]="|"+aaa+"|";
+
+
+}
+}
+		var text="";
+			for(i=0;i<imax;i++)
+{
+			for(j=0;j<jmax;j++)
+{
+				text+= G[i][j];
+}
+				text+="<br>";
+}
+
+document.getElementById("demo").innerHTML= text;
+
+
+	var d;
+	x=0;
+	sorteio= new Array (6);
+	
+		for (d=0; d<6; d++){
+		
+			x=Math.floor((Math.random()*60)+1);
+			sorteio [d]=x+"|";
+		
+}
+
+
+		var text2="";
+		
+			for (d=0; d<6; d++){
+			text2 += sorteio [d];
+		}
+ 
+ document.getElementById("demo1").innerHTML= text2;
+ 
+		var text3="";
+		var ii, iii;
+		var acerto=0;
+			for (i=0;i <imax;i++){
+			
+				for (ii=0;ii<imax;ii++){
+					for (iii=0;iii<jmax;iii++){
+						if (G[i][ii]==sorteio[iii]){
+						acerto++;
+						}
+					}
+			}
+				text3 += acerto+"";
+			}
+document.getElementById("demo2").innerHTML= text3;
+}
+</script>
+</body>
+</html>

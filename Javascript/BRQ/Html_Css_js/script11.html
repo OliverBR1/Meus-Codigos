@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Valida Email</title>
+		<script type="text/javascript">
+			function validarEmail() {
+				var x = document.getElementById("inpExemplo").value;
+				var atpos = x.indexOf("@");
+				var dotpos = x.lastIndexOf(".");
+				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+					alert("Não é um email válido");
+			    // em relação aos caracteres
+				// ca) deve ser formado por digitos (0-9), letras (a-z) e simbolos @._-
+				// cb) ????????????
+				// em relação ao ponto
+				// pa) não pode começar por ponto
+				//     x.substr(0,1) == '.' está errado
+				// pb) não pode terminar por ponto
+				//     x.charAt(x.length -1) == '.' está errado
+				// pc) não pode haver ponto imediatamente antes e depois do @
+				// pd) não pode haver dois pontos seguidos
+				// pe) o último ponto deve estar a pelo menos 2 ou 3 caracteres do fim do email
+				// pf) após o @ deve haver ao menos 1 ponto
+				// em relação ao @
+				// aa) só pode haver 1 @
+				// ab) não pode começar ou terminar com @
+				
+				
+				
+				return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		Email:
+		<input type="text" id="inpExemplo"/>
+		<input type="submit" id="btnExemplo" value="Enviar"
+		onclick="return validarEmail()"/>
+	</body>
+</html>

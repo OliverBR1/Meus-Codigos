@@ -1,0 +1,23 @@
+<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href="Test1.css">
+		</head>
+	<body>
+	<body background="Lich2.jpg">
+	
+		<p>Nome<input id="tx1"></p>
+		<p>End<input id="tx2"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<button id="bt1" onclick="myFunction()">OK</button>
+		
+		<script>
+		function myFunction() {
+		var obj1 =document.getElementById("tx1").value;
+				document.getElementById("demo1").innerHTML = "Sr."+obj1;	
+		var obj2 =document.getElementById("tx2").value;
+				document.getElementById("demo2").innerHTML = "Rua."+obj2;
+				}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+.fundo1
+{
+background-color: red;
+}
+.fundo2
+{
+background-color: blue;
+}
+.fundo3{
+background-color: green;
+}
+.fundo4
+{
+background-color:purple;
+}
+p{font-size:16px;
+}
+Div fieldset {
+   float: center;
+   margin: 16px auto 16px auto;
+   width: 40%;
+   border: solid black 1px;
+   padding: 3%;
+   margin-bottom: 10px;
+}
+
+Div legend {
+   padding: 6px;
+   margin: 16px;
+   border: solid black 1px;
+   font-size: 90%;
+   font-weight: bold;
+   background-color: #e8e8e8;
+}
+
+ form {
+   display: block;
+   font-size: 16px;
+}
+
+Div input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+
+form input.botao {
+   display: block;
+   width: auto;
+   float: right;
+}
+table{
+	text-align:center;
+	float: center;
+	font-size:32px;
+	width: 40%;
+	height:40%;
+	margin-bottom: 10px;
+}

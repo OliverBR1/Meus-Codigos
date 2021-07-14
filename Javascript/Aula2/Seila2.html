@@ -1,0 +1,42 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="aaa.css">
+<meta charset="UTF-8">
+</head>
+<body id="corpo">
+<input id="id2">
+<button id="bt2" onclick="myfunction2()">OK</button>
+<table border=1>
+<tr><td id="td1">1</td><td id="td2">2</td></tr>
+<tr><td id="td3">3</td><td id="td4">4</td></tr>
+</table><hr>
+<script>
+function myfunction2()
+{
+var a=document.getElementByld('td1');
+var b=document.getElementByld('td2');
+var c=document.getElementByld('td3');
+var d=document.getElementByld('td4');
+var e=document.getElementByld('corpo');
+var valor= parseInt(document.getElementByld("id2").value);
+if (valor==1){a.classname='fundo';
+}
+if (valor==2){a.classname='fundo1';
+}
+if (valor==3){a.classname='fundo2';
+}
+if (valor==4){a.classname='fundo3';
+}
+if (valor==5){a.classname='aaa';
+}
+if(document.getElementByld("id2".value=="id2").value==""){
+a.classname='fundo4';
+b.classname='fundo4';
+c.classname='fundo4';
+d.classname='fundo4';
+e.classname='fundo4';
+}
+}
+</script>
+</body>
+</html>

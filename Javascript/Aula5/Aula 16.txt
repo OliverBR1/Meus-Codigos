@@ -1,0 +1,30 @@
+16/03/2018 - Prof. Robson
+Aula 15
+
+Laços de repetição:
+
+- FOR
+for (inicialização; condição; incremento)
+
+Ex.: 
+for (var i = 0; i <=10; i++) {
+	instruções;
+} 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- VETORES
+
+Têm nome e deve ser mostrado os espaços a serem alocados.
+Ex.: vet[10]
+
+Começa do zero.
+
+Criando vetor
+
+nome = new Array(10);
+
+
+
+Math.random() * 100 + 1
+cria um valor aleatório no escopo da multiplicação - 1 (o +1 volta a ser o valor total)

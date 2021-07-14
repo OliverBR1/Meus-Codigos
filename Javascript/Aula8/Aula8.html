@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+		<body>
+		<h2>Números sequenciais</h2>
+		<button id="bt1" onclick="myFunction()">Ok</button>
+
+		<p id="demo"></p>
+		
+		<script>
+		function myFunction(){
+var i,j;
+var iMax = 5;
+var jMax = 7;
+var f = new Array() ;
+var aaa=1;
+for(i=0; i<iMax;i++) {
+f [i]=new Array();
+for(j=0; j<jMax; j++) {
+
+f [i] [j]="|"+aaa+"|";
+	aaa++;
+}
+}
+var text="";
+for(i=0;i<iMax;i++){
+for(j=0;j<jMax;j++){
+text+= f [i] [j];
+}
+text+="<br>";
+}
+document.getElementById("demo").innerHTML= text;
+}
+		
+		</script>
+		</body>
+</html>

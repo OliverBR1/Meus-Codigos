@@ -1,0 +1,36 @@
+<!--Receber dados aleatórios em um vetor de 15 alocações.
+- Apresentar todos os números em linha com vírgula
+- Apresentar a soma do primeiro com o ultimo número.
+- Apresentar o produto do terceiro com o sétimo.-->
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<p id="lousa1"></p>
+	<p id="lousa2"></p>
+	<p id="lousa3"></p>
+	<button onclick="sorteio()">Clique</button>
+<script>
+	function sorteio() {
+		vetor = new Array(15);
+		var i = 0;
+		while (i < 15) {
+			var x = Math.floor((Math.random() * 100) + 1);
+			vetor[i] = x;
+			i++
+		}
+		// Variáveis de texto e apresentações na tela
+		var text = "";
+		for (i = 0; i < 15; i++) {
+			text += vetor[i] + ", ";
+			document.getElementById("lousa1").innerHTML = "Vetor preenchido: " + text;
+		}
+		var soma = vetor[0] + vetor[14];
+		document.getElementById("lousa2").innerHTML = "Soma do primeiro e último elemento: " + soma;
+		var mult = vetor[2] * vetor[7];
+		document.getElementById("lousa3").innerHTML = "Produto do terceiro e sétimo elemento: " + mult;
+	}
+</script>
+</body>
+</html>

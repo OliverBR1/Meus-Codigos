@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	</head>
+<body>
+<h2> Teste </h2><HR>
+<button id="bt1" onclick="myFunction()">OK</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(){
+var i,j;
+var iMax=4;
+var jMax=3;
+var f = new Array();
+for(i=0; i<iMax; i++) {
+f [i]=new Array();
+for(j=0; j<jMax; j++) {
+var aaa=Math.floor((Math.random()*60)+1);
+f [i] [j] ="|"+aaa+"|";
+}
+}
+var text="";
+for(i=0;i<iMax; i++){
+for(j=0;j<jMax; j++){
+text+= f [i] [j];
+}
+text+="<br>";
+}
+document.getElementById("demo").innerHTML=text;
+}
+</script>
+</body>
+</html>

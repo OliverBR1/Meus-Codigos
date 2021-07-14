@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>Tabuada Javascript</title>
+      <meta charset="utf-8">
+      <script type="text/javascript" src="tabuada.js"></script>
+   </head>
+
+   <body>
+
+      <div id="form">
+         <input id="numero" value="">
+         <button id="gerar" onclick="tabuada()">OK</button>
+      </div>
+
+      <div id="resultado">Escolha um número</div>
+		<script>
+		function tabuada(){
+		 var numero = document.getElementById("numero").value;
+		 var resultado = document.getElementById("resultado");
+		 var tabuada = "";
+		 
+		 for(i=1; i<=10; i++){
+ 
+        tabuada = tabuada + numero + " x " + i + " = " + i*numero + "<br>";
+    }
+    
+	resultado.innerHTML = tabuada;
+
+}
+		</script>
+   </body>
+</html>

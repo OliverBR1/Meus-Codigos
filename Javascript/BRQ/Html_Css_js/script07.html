@@ -1,0 +1,62 @@
+<html>
+	<head>
+	<title>
+		popup malditos
+	</title>
+		<script type="text/javascript">
+		window.alert("Exemplo do popup ALERT");
+		
+		
+		var escolha = window.confirm("Escolha um dos botões abaixo e pressione.");
+		var botao;
+		if (escolha == true) {
+			botao = "OK";
+		}
+		else {
+			botao = "Cancelar";
+		}
+		window.alert("Você escolheu o botão " + botao);
+		
+		
+		var nome = window.prompt("Digite o seu nome", "ex: Johanneson Silva");
+		
+		if (nome == null){
+			console.log("nome == null");
+		}
+		if (nome == ""){
+			console.log('nome == ""');
+		}
+		
+		
+		
+		var resposta;
+		if (nome != null && nome != "") {
+			resposta = "Olá " + nome + "! \nSeja bem vindo ao sistema.";
+		}
+		window.alert(resposta)
+
+
+        nome=null; 
+		if (nome == null && nome == "") {
+			console.log('nome == null && nome == ""  - são iguais');
+		}
+		else {
+			console.log('nome == null && nome == ""  - são diferentes');
+		}
+		
+		
+		var cor = "amarelo";
+		// var minhaCasa = `A cor da minha casa é ${cor}`;
+		// var minhaCasa = `A cor da minha casa é ` + cor;
+		// var minhaCasa = 'A cor da minha casa é ' + cor;
+		// var minhaCasa = 'A cor da minha casa é ${cor}';
+		var minhaCasa = "A cor da minha casa é ${cor}";
+		
+		console.log(minhaCasa)
+		
+		
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

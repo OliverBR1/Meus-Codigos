@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Formulário</title>
+	</head> 
+	
+	<body>
+	<h3>Formulário</h3>
+	
+	<form method="post">
+		<table border="1">
+			<tr>
+	           <td>nome</td>
+			   <td><input id="campoNome" name="campoNome" type="text" maxlength="10"/></td>
+			</tr>
+			<tr>
+	           <td>senha</td>
+			   <td><input id="campoSenha" name="campoSenha" type="password"/></td>
+		    </tr>
+			<tr>
+		       <td>pessoa</td>
+			       <td><input id="campoTipo" name="campoTipo" type="radio" value="pf"> Física 
+		       <input id="campoTipo" name="campoTipo" type="radio" value="pj" checked> Jurídica 
+			       </td>
+			</tr>
+			<tr>
+			   <td>Hobbie</td>
+			   <td> <input name="campoHobbie" value="Leitura" type="checkbox"> Leitura
+			        <input name="campoHobbie" value="video-game" type="checkbox"> Video-game
+					<input name="campoHobbie" value="colecionar" type="checkbox"> Colecionar
+			   </td>
+			</tr>
+			
+			<tr>
+				<td>Observação</td>
+				<td><textarea id="campoObs" name="campoObs" cols="40" rows="5" maxlength="20"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td>UF</td>
+				<td><select name="campoUF">
+						<option>SP
+						<option>RJ
+						<option>MG
+						<option>PR
+						<option>SC
+						<option>BA
+				    </select>
+				</td>
+			</tr>
+			<tr>
+				<td>Botão</td>
+				<td><input type="button" value="Aperte aqui!"></td>
+			</tr>
+			<tr>
+				<td>Outros</td>
+				<td>
+					<input type="submit" >
+					<input type="reset" >
+				</td>
+			</tr>
+			   
+		</table>	
+
+	<fieldset>
+	   <legend>Dados Pessoais</legend>
+	   <p>Nome: <input type="text" /></p>
+	   <p>E-Mail: <input type="text" /></p>
+	</fieldset>
+		
+	</form>
+	
+	</body>
+</html>

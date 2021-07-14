@@ -1,0 +1,28 @@
+<html>
+	<head>
+	<link rel="stylesheet" Type="text/css" href="estilo2.css">
+	<meta charset="UTF-8">
+	</head>
+<body>
+<p>Digite um número</p>
+<input id="id1">
+<button id="bt1" onclick="myFunction()">OK</button>
+<h2> JavaScript While</h2>
+<p id="demo"></p>
+<script>
+function myFunction()
+{
+var tab= parseInt(document.getElementById("id1").value);
+var text="";
+var i=0;
+while(i<=tab)
+{
+text +=i+"<br>";
+i+=2;
+}
+
+document.getElementById("demo").innerHTML= text;
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,21 @@
+<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href="Test1.css">
+		</head>
+		<body>
+		<input id="tx1">
+		<input id="tx2">
+		<button id="bt1" onclick="myFunction()">OK</button>
+		<p id="demo1"></p>
+		
+		<script>
+		function myFunction() {
+		
+		var obj1 =math.floor(document.getElementById("tx1").value);
+		var obj2 =math.floor(document.getElementById("tx2").value);
+		var total =obj1+obj2;
+				document.getElementById("demo1").innerHTML = total;
+		}
+		</script>
+	</body>
+</html>

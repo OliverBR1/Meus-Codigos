@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<meta charset="UTF-8">
+</head>
+<div>
+
+<fieldset>
+      <legend>Identificação</legend>
+<body id="corpo">
+valor1<input id="id2"><br>
+valor2<input id="id3"><br>
+<button id="bt2" onclick="myfunction2()">OK</button><p>
+<table border=1>
+<tr><td id="td1" colspan=2><center>1</center></td></tr>
+<tr>
+<td id="td2">2</td>
+<td id="td3">3</td>
+</tr>
+</table>
+</fieldset>
+</div>
+<script>
+function myfunction2()
+{
+
+var v1=parseInt(document.getElementById('id2').value);
+var v2=parseInt(document.getElementById('id3').value);
+
+var a=document.getElementById('td1');
+var b=document.getElementById('td2');
+var c=document.getElementById('td3');
+
+if(v1>v2)
+{
+a.className='fundo1';
+}
+if(v2>v1)
+{
+b.className='fundo2';
+}
+if(v1==v2)
+{
+c.className='fundo3';
+}
+}
+</script>
+</body>
+</html>

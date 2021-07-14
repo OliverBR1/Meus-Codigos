@@ -1,0 +1,71 @@
+<html>
+	<head>
+	<title></title>
+	<script type="text/javascript">
+		function validarForm() {
+		    var nomeOk = true;
+		
+			var nome = document.getElementById("CampoNome").value;
+			
+			if (nome == null || nome == "" ){
+				document.getElementById("spanNome").innerHTML = 'campo obrigatório';
+				nomeOk = false;
+			}
+			
+			if (nome.substr(0,1)==" " && nomeOk){
+				document.getElementById("spanNome").innerHTML = 'nome não pode começar com espaço';
+				nomeOk = false;
+			}
+
+		    var anoOk = true;			
+			var ano = parseInt(document.getElementById("CampoAno").value);
+			if(isNaN(ano)){
+				document.getElementById("spanAno").innerHTML = 'Ano deve ser numérico';
+				anoOk = false;
+			}
+			
+			if(ano > 2003 && anoOk){
+				document.getElementById("spanAno").innerHTML = 'Ano deve ser menor ou igual a 2013';
+				anoOk = false;
+			}
+			
+		    var cnhOk = true;	
+			var cnh = document.getElementById("CampoCNH").value;
+			if(cnh.toLowerCase()!='s' && cnh.toLowerCase()!='sim' &&
+			   cnh.toLowerCase()!='n' && cnh.toLowerCase()!='não'){
+				document.getElementById("spanCNH").innerHTML = 's/n ou sim/não';
+				cnhOk = false;
+			}
+
+			return (nomeOk && anoOk && cnhOk);
+		}
+	</script>
+	</head>
+	<body>
+		<h1>Cadastro<h1>
+		<form method="get" action="">
+			<table border="0">
+				<tr>
+					<td>Nome:</td>
+					<td><input type="text" id="CampoNome" name="CampoNome"/></td>
+					<td><span id="spanNome"></span></td>
+					
+				</tr>
+				<tr>
+					<td>Ano Nascimento</td>
+					<td><input type="text" id="CampoAno"/></td>
+					<td><span id="spanAno"></span></td>
+				</tr>
+				<tr>
+					<td>tem CNH</td>
+					<td><input type="text" id="CampoCNH"/></td>
+					<td><span id="spanCNH"></span></td>
+				</tr>
+			</table>   				
+
+			<input type="submit" id="btnExemplo" value="Enviar" onclick="return validarForm()"/>
+			<input type="reset" id="btnExemplo" value="Limpar"/>
+
+		</form>	   
+	</body>
+</html>

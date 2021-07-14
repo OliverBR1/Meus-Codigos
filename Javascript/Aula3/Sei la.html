@@ -1,0 +1,65 @@
+<html>
+	<head>
+	<link rel="stylesheet" Type="text/css" href="Seila.css">
+	<meta charset="UTF-8">
+	</head>
+<body>
+		<table>
+		<tr>
+		<td><p>Nome</td><td><input id="tx1"></p></td>
+		</tr>
+		<tr>
+		<td><p>Fone</td><td><input id="tx2"></p></td>
+		</tr>
+		<tr>
+		<td><p>Bairro</td><td><input id="tx3"></p></td>
+		</tr>
+		<tr>
+		<td><p>inscrição</td><td><input id="tx4"></p></td>
+		<tr>
+		<td><p>Salario</td><td><input id="tx5"></p></td>
+		</tr>
+		<tr>
+		<td><p>Sexo</td><td><input id="tx6"></p></td>
+		</tr>
+		</table>
+		<textarea rows=10 cols=50></textarea><p>
+		<table border 1 width=15% height=15%>
+		<tr>
+		<td id="nome"><p id="demo1"></p></td>
+        </tr>
+		<tr>
+		<td><p id="demo2"></p></td>
+		</tr>
+		<tr>
+		<td><p id="demo3"></p></td>
+		</tr>
+		<tr>
+		<td><p id="demo4"></p></td>
+		</tr><tr>
+		<td><p id="demo5"></p></td>
+		</tr><tr>
+		<td><p id="demo6"></p></td>
+		</tr>
+		</table>
+		<button id="bt1" onclick="myFunction()">OK</button>
+		
+		<script>
+		function myFunction() {
+		var obj1 =document.getElementById("tx1").value;
+				document.getElementById("demo1").innerHTML = obj1;	
+		var obj2 =document.getElementById("tx2").value;
+				document.getElementById("demo2").innerHTML = obj2;
+		var obj3 =document.getElementById("tx3").value;
+				document.getElementById("demo3").innerHTML = obj3;
+		var obj4 =document.getElementById("tx4").value;
+				document.getElementById("demo4").innerHTML = obj4;
+		var obj5 =document.getElementById("tx5").value;
+				document.getElementById("demo5").innerHTML = obj5;
+		var obj6 =document.getElementById("tx6").value;
+				document.getElementById("demo6").innerHTML = obj6;
+				}
+				
+</script>
+</body>
+</html>

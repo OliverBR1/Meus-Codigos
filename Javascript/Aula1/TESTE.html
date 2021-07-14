@@ -1,0 +1,27 @@
+<html>
+<body>
+<meta charset="utf-8">
+<div class="w3-example">
+<div style="width:100%;height:100%;">
+<div style="background-color:#D94A38;width:100%;height:100%;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:114px;float:left;text-align:center;" onclick="clickMeEvent(this)">VAI</div>
+<script type="application/javascript">
+function clickMeEvent(obj) {
+  if (obj.innerHTML == "VAI") {
+    obj.innerHTML = "SE";
+    return;
+  }
+  if (obj.innerHTML == "SE") {
+    obj.innerHTML = "FODER";  
+    return; 
+  }
+  if (obj.innerHTML == "FODER") {
+  obj.innerHTML = "...";  
+    return; 
+  }
+  }
+</script>
+</div> 
+</div>
+
+</body>
+</html>

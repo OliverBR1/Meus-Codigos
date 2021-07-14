@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <script type="text/javascript" src="./js/aviao.js"></script>
+        <meta charset="utf-8">
+        <title>Reserva de Vôos</title>
+        <link rel="stylesheet" href="./css/base.css">
+        
+    </head>
+    <body onload="consultarDisponivel()">
+        <h1> Lista de assentos disponivel nos voos</h1>
+        <h2> Instruções:</h2><br>
+        <h3>1- Faça a escolha seu vôo e faça a reserva de acordo com as vagas. Elas são atualizadas em tempo real!</h3>
+        <table border="0" cellspacing = "0" cellspading = "5">
+            <legend> Insira os dados pra sua reserva</legend><br>
+            <tr>
+                <td>Número do voo:</td>
+                <td><input type="text" id="numvoo" size="2"></td>
+            </tr>
+            <tr>
+                <td>Documento de identificação</td>
+                <td><input type="text" id="documento"></td>
+            </tr>
+                <td><input type="button" onclick="reservarVoo()" value="Reservar"> </td>
+                
+            </tr>
+        </table><br>
+
+        <table class="listaVoo" border="0" cellspacing="0" cellspading="5">
+            <th colspan="2">Total de assentos disponiveis por voo:</th>
+            <tr>
+                <td>Voo 151</td>
+                <td><span id = "v151"></span></td>
+                <td><span id="m1"></span></td>
+            </tr>
+            <tr>
+                <td>Voo 152</td>
+                <td><span id = "v152"></span></td>
+                <td><span id="m2"></span></td>
+            </tr>
+            <tr>
+                <td>Voo 153</td>
+                <td><span id = "v153"></span></td>
+                <td><span id="m3"></span></td>
+            </tr>
+            <tr>
+                <td>Voo 154</td>
+                <td><span id = "v154"></span></td>
+                <td><span id="m4"></span></td>
+            </tr>
+            <tr>
+                <td>Voo 155</td>
+                <td><span id = "v155"></span></td>
+                <td><span id="m5"></span></td>
+            </tr>
+            <tr>
+                <td>Voo 156</td>
+                <td><span id = "v156"></span></td>
+                <td><span id="m6"></span></td>
+            </tr>
+            <tr>
+                <td>Voo 157</td>
+                <td><span id = "v157"></span></td>
+                <td><span id="m7"></span></td>
+            </tr>
+            <tr>
+                <td>Voo 158</td>
+                <td><span id = "v158"></span></td>
+                <td><span id="m8"></span></td>
+            </tr>
+        </table>
+        <img src="./img/aviao.png" class="img">
+        <span id="mensagem" class="resultado"></span>
+    </body>
+</html>

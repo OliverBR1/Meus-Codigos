@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h2>For e Vetor de números aleatórios</h2>
+	<button onclick="sorteio()">OK</button>
+	<p id="lousa1"></p>
+	<p id="lousa2"></p>
+<script>
+	function sorteio() {
+		vetor = new Array(10);
+		var i = 0;
+		while (i < 10) {
+			var x = Math.floor((Math.random() * 100) + 1);
+			vetor[i] = x;
+			i++;
+		}
+		var text1 = "";
+		var text2 = "";
+		for (i = 0; i < 10; i++) {
+			text1 += vetor[i] + " ";
+			text2 = vetor[4];
+		}
+		document.getElementById("lousa1").innerHTML = text1;
+		document.getElementById("lousa2").innerHTML = text2;
+	}
+</script>
+</body>
+</html>

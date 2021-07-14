@@ -1,0 +1,39 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	</head>
+		<body>
+		<h2>Números sequenciais</h2>
+		<button id="bt1" onclick="myFunction()">Ok</button>
+
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		
+		
+		<script>
+		function myFunction(){
+meuvetor2= new Array(10);
+var i= 0;
+while(i<10){
+var x = Math.floor((Math.random()*100)+1);
+meuvetor2[i]=x;
+i++;
+}
+var text="";
+for(i=0;i<10;i++)
+{
+text +=","+ meuvetor2[i];
+}
+var maior= 0;
+for (i=0;i<meuvetor2.length;i++)
+{
+if (meuvetor2[i]>maior){
+maior=meuvetor2[i];
+}
+}
+document.getElementById("demo").innerHTML=text;
+document.getElementById("demo1").innerHTML=maior;
+	}
+		</script>
+		</body>
+</html>

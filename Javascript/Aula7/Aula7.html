@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	</head>
+<body>
+<h2> JAVA SCRIPT WHILE</h2><HR>
+<button id="bt1" onclick="myFunction()">OK</button>
+
+<p id="demo"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+function myFunction(){
+meuvetor2= new Array(10);
+var i= 0;
+var rep=0;
+while(i<10){
+var x = Math.floor((Math.random()*100) +1);
+meuvetor2[i]=x;
+i++;
+}
+document.getElementById("demo").innerHTML=meuvetor2+".";
+
+var comparado=Math.floor((Math.random()*6)+1);
+var comparacao="";
+for (i=0;i<6;i+=1){
+	if(comparado==meuvetor2[i]){
+	var pos = i+1
+	comparacao+="O valor da posição "+ pos +" do vetor é igual a " + comparado+"<br>";
+	rep+=1;
+	}
+}
+document.getElementById("demo3").innerHTML= comparacao;
+document.getElementById("demo4").innerHTML=+rep;
+document.getElementById("demo5").innerHTML= +comparado;;
+}
+</script>
+</body>
+</html>

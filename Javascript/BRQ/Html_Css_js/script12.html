@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title></title>
+			<script type="text/javascript">
+				function mascara(src, mask) {
+					var i = src.value.length;
+					var saida = "#";
+					var texto = mask.substring(i)
+					console.log(texto.substring(0, 1));
+					if (texto.substring(0, 1) != saida) {
+					   src.value += texto.substring(0, 1);
+					}
+				}
+			</script>
+	</head>
+	<body>
+		CPF: <input type="text" maxlength="14" name="cep" 
+		     onkeypress="mascara(this, '###.###.###-##')"/>
+	</body>
+</html>  

@@ -1,0 +1,41 @@
+<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href=".css">
+		<meta charset="utf-8">
+		</head>
+		<body>
+		<p> Enter com número e clique ok:</p>
+		Valor 1 <input id="id1"><br>
+		Valor 2 <input id="id2"><br>
+		<button id="bt1" onclick="soma()">+</button>
+		<button id="bt2" onclick="subt()">-</button>
+		<button id="bt3" onclick="mult()">*</button>
+		<button id="bt4" onclick="divi()">/</button>
+		
+		<p id="demo"></p>
+		<script>
+		function soma(){
+		var a=Math.floor(document.getElementById('id1').value);
+		var b=Math.floor(document.getElementById('id2').value);
+		total=a+b;
+			document.getElementById("demo").innerHTML-total;
+		}
+		function subt(){
+		var a=Math.floor(document.getElementById('id1').value);
+		var b=Math.floor(document.getElementById('id2').value);
+		total=a-b;
+			document.getElementById("demo").innerHTML-total;
+		}
+		function mult(){
+		var a=Math.floor(document.getElementById('id1').value);
+		var b=Math.floor(document.getElementById('id2').value);
+		total=a*b;
+			document.getElementById("demo").innerHTML-total;
+		}
+		function divi(){
+		var a=Math.floor(document.getElementById('id1').value);
+		var b=Math.floor(document.getElementById('id2').value);
+		total=a/b;
+			document.getElementById("demo").innerHTML-total;
+		}
+		</body>
