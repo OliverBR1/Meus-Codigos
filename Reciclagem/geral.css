@@ -1,0 +1,320 @@
+	body{
+	margin:0; 
+	padding:0; 
+	font-size:18px;
+	color:black;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url("Fundo.jpg");
+	background-repeat: repeat;
+}
+
+h1{
+	margin:0 0 30px 0;
+	font-size:22px; 
+	font-family:"CaviarDreamsBold", Arial, Helvetica, sans-serif;
+	font-weight:normal;
+}
+
+#header{
+	width: 100%;
+	height: 50px;
+	padding:35px 0;
+	background-image:url("Head.jpg");
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#header hgroup{
+	display:block;
+	float:left; width:auto; 
+	clear:right;
+}
+#header hgroup h1, #header hgroup h2{
+	margin:auto; 
+	font-weight:normal; 
+}
+
+#header hgroup h1{
+	font-size:2em;
+}
+
+#header hgroup h2{
+	font-size:1em;
+}
+
+div#topo{
+	display:block;
+	width:100%; 
+	text-align:left; 
+}
+
+#topo, #topo a{
+	color:green; 
+}
+
+a{
+	color:green;
+	text-decoration:none;
+}
+
+nav ul{
+	text-transform:uppercase;
+	font-size:16px;
+}
+
+#topnav{
+	text-align:center;
+	width: 980px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#topnav li{
+	position:relative;
+	display:block;
+	float:left;
+	margin:0 30px 0 0;
+}
+
+#topnav li a{
+	
+	display:block;
+	padding:20px 0;
+}
+
+#topnav a{
+	color:Black;
+	
+}
+
+#topnav li.active a, #topnav a:hover{
+	color:Green;
+}
+
+#imag1{
+
+    width: 880px;
+    list-style:none;
+    display: flex;
+    margin: 0 px;
+   }
+
+   .min1{
+    width: 300px;
+	margin:10px;
+   }
+   
+   .min2{
+    width: 400px;
+	margin:10px;
+   }
+   
+main{
+	width: 100%;
+	color:black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.sectionMain{
+	text-align:center;
+	width: 170px;
+	height: 300px;
+	float: left;
+	border: 2px solid green;
+	border-radius:20px;
+	padding: 5px;
+	margin-right: 5px;
+}
+
+.sectionMain article{
+	height: 250px;
+}
+
+.sectionMain footer{
+	text-align: center;
+}
+
+.button{
+	display:inline-block;
+	border:1px solid;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.button.small{
+	font-size:.9em;
+	padding:6px 15px 5px 15px;
+}
+
+.button.green{
+	color:Green; 
+	background-color:White; 
+	border-color:Green;
+}
+
+.button.green:hover
+{color:#BDBDBD;
+	background-color:green;
+	border-color:#BDBDBD;
+}
+
+div#linha1{
+	text-align:center;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	margin-top: 10px;
+}
+
+#conteudo{
+	
+	width: 980px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#conteudo figure{
+	width: 980px;
+	height: 500px;
+	margin-top: 30px;
+}
+#conteudo figure img{
+	
+	float: left;
+	margin-right: 30px;
+}
+
+#conteudo figure figcaption{
+	width: 650px;
+	float: left;
+}
+
+select{
+width: 220px;
+height: 25px;
+border:1px solid Green;
+background-color: #CCC;
+border-radius: 5px;
+padding-left: 5px;
+}
+
+.min{
+    width: 300px;
+    display: block;
+   }
+
+   .lbox{
+    visibility: hidden;
+    opacity: 0;
+	display: none;
+   }
+
+   .lbox:target{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(10,10,10,0.7);
+    position:fixed;
+	display:block;
+   }
+
+   .box_img {
+    width: 1000px;
+	height: 1000px;
+    margin: 0px auto;
+	
+   }
+   
+   .btn{
+    color:white;
+    font-family: 'Arial';
+    text-decoration: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+   }
+
+   #prev {
+    left: 5%;
+    top: 45%;
+   }
+
+   #next {
+    right: 5%;
+    top: 45%;
+   }
+
+   #close {
+    right: 2%;
+    top: 0;
+   }
+
+   .box_img img{
+    opacity: 0;
+
+   }
+
+   .lbox:target .box_img img{
+    width: 80%;
+    margin-left: 100px;
+    margin-top: 60px;
+    opacity: 1;
+    transition: opacity .4s linear;
+   }
+   
+   .box_img1 {
+    width: 900px;
+	height: 1000px;
+    margin: 0px auto;
+   }
+   
+   .btn{
+    color:white;
+    font-family: 'Arial';
+    text-decoration: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+   }
+
+   #prev {
+    left: 5%;
+    top: 45%;
+   }
+
+   #next {
+    right: 5%;
+    top: 45%;
+   }
+
+   #close {
+    right: 2%;
+    top: 0;
+   }
+
+   .box_img1 img{
+    opacity: 0;
+
+   }
+
+   .lbox:target .box_img1 img{
+    width: 70%;
+    margin-left: 100px;
+    margin-top: 60px;
+	text-align:center;
+    opacity: 1;
+    transition: opacity .4s linear;
+   }

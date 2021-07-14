@@ -1,0 +1,24 @@
+<app-pokemon-detalhe [pokemonFilho]="selecionadoPokemon"></app-pokemon-detalhe>
+
+<table class="table" >
+    <tr>
+       <th>Nome</th>    
+       <th>URL</th> 
+       <th>Ações</th> 
+    </tr>
+    <tr *ngFor="let p of pokemons?.results">
+        <td>{{ p | json | uppercase }}</td> <!-- poderia ser p.name.toUpperCase() -->
+        <td> {{ p.url }}</td>
+        <td> <button class="btn btn-primary" (click)="selecionarPokemon(p.url)"> Selecionar </button>  </td>
+    </tr>
+</table>
+
+<div class="row">
+    <button class="btn btn-primary ml-4 mr-4" (click)="paginaAnterior()"> Pagina Anterior </button>
+    <button class="btn btn-primary" (click)="proximaPagina()"> Proxima Pagina</button>
+</div>
+
+
+
+<!-- count % this.limit -->
+<!-- ? operador Elvis, verifica se a variavel é nula ou se ela não é nula-->
