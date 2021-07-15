@@ -1,1 +1,0 @@
-document.write("<p>segunda linha</p>");
