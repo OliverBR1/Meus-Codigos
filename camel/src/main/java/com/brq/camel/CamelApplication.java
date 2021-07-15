@@ -10,5 +10,5 @@ public class CamelApplication {
 		SpringApplication.run(CamelApplication.class, args);
 	}
 
-	
+	//teste
 }
