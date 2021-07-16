@@ -1,4 +1,4 @@
-package com.brq.camel.models;
+package com.brq.camel.gorest;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.brq.camel.models;
+package com.brq.camel.gorest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
