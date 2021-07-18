@@ -34,11 +34,28 @@ public class UsuarioController {
 //		System.out.println("Rota de usuários");
 //		return "Rota de usuários";
 	}
-	@GetMapping ( value = "{id}" )
-	public UsuarioModel getOne(@PathVariable("id") int id ) {
-		return this.usuarios.get(id);
+	
+
+	@GetMapping( value="{id}")
+	public UsuarioModel getOne(@PathVariable("id") int id){	// o '@PathVariable' informa que o 'id' do '@GetMapping' será o dado recebido e transferido para o 'id' do método
+		UsuarioModel usuario = new UsuarioModel();
+		for (int i = 0; i < this.usuarios.size(); i++) {
+			if (id == this.usuarios.get(i).getId()) {
+				usuario = this.usuarios.get(i);
+			}
+		}
+		return usuario;
 	}
 	
+	@DeleteMapping(value="{id}")
+	public void delete(@PathVariable("id") int id) {
+		for (int i = 0; i < this.usuarios.size(); i++) {
+			if (id == this.usuarios.get(i).getId()) {
+				usuarios.remove(usuarios.get(i));
+			}
+		}
+	}
+
 	@PostMapping ( value = "" )
 	public UsuarioModel save( @RequestBody UsuarioModel usuario ) {
 		System.out.println(usuario.getEmail());
@@ -47,28 +64,6 @@ public class UsuarioController {
 	} 
 	
 	
-	/*
-	 *    localhost:8080/usuarios/1    é um path Param   ( dado é obrigatório)
-	 *    localhost:8080/usuarios/1?page=8    é um query Param   ( dado não é obrigatório)
-	 * */
-	
-	// por conta do request mapping, iremos concatenar "usuarios" (linha 15) com o value abaixo
-	@DeleteMapping ( value = "{id}" )
-	public void delete(
-			@PathVariable("id") int id ) throws Exception {
-		
-		try {
-			this.usuarios.remove(id);
-		}
-		catch (IndexOutOfBoundsException e) {
-			throw new Exception("Índice não encontrado");
-		}
-		catch (Exception e) {
-			throw new Exception("Erro no servidor");
-		}
-		
-	}
-
 	@PatchMapping (value = "{id}")
 	public UsuarioModel update ( 
 			@RequestBody UsuarioModel usuario,
