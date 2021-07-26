@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
+import { CicloComponent } from './ciclo/ciclo.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrimeiroComponent
+    PrimeiroComponent,
+    CicloComponent
   ],
   imports: [
     BrowserModule,

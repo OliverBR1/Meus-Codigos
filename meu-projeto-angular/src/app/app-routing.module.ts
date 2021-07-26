@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CicloComponent } from './ciclo/ciclo.component';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
 import { PokemonGuardService } from './shared/services/pokemon-guard.service';
 
 
 const routes: Routes = [
   { path:'primeiro', component: PrimeiroComponent },
+  { path:'ciclo', component: CicloComponent },
   { path: 'pokemons', loadChildren: () => import('./pokemons/pokemons.module').then(m => m.PokemonsModule)  , canActivate : [] },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'categorias', loadChildren: () => import('./categorias/categorias.module').then(m => m.CategoriasModule)  },

@@ -1,5 +1,7 @@
 import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { GoRestUserModel } from '../shared/Models/go-rest-user-model';
+import { UsuarioModel } from '../shared/Models/usuario.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,7 @@ export class CrudService {
   constructor(private http: HttpClient) { }
 
   getAll(){
-    return this.http.get(this.url);
+    return this.http.get<GoRestUserModel>(this.url);
   }
 
   getOne( id : number ){
@@ -21,10 +23,10 @@ export class CrudService {
 
   save(user : any){
 
-    return this.http.post(this.url, user, this.getHeader() );
+    return this.http.post<UsuarioModel>(this.url, user, this.getHeader() );
   }
 
-  delete ( id : number ){
+  delete ( id : number | undefined ){
 
     return this.http.delete(`${this.url}/${id}`, this.getHeader() );
   }

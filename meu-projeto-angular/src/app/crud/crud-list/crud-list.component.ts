@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GoRestUserModel } from 'src/app/shared/Models/go-rest-user-model';
 import { CrudService } from '../crud.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { CrudService } from '../crud.service';
 })
 export class CrudListComponent implements OnInit {
 
-  usuarios : any = null;
+  usuarios? : GoRestUserModel;
   constructor(private crudService : CrudService) { }
 
   ngOnInit(): void {
@@ -25,7 +26,7 @@ export class CrudListComponent implements OnInit {
   }
 
 
-  onDelete ( id : number ){
+  onDelete ( id : number | undefined ){
     this.crudService.delete ( id )
       .subscribe(
         (data) => {
