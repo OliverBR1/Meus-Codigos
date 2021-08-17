@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CicloComponent } from './ciclo/ciclo.component';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
-import { PokemonGuardService } from './shared/services/pokemon-guard.service';
+
 
 
 const routes: Routes = [

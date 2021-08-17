@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HeaderService } from '../shared/services/header.service';
@@ -19,8 +19,7 @@ export class ProductsService {
 
   
   getOne( id : number ){
-    return this.http.get(`${this.url}/${id}`);
-  }
+    return this.http.get(`${this.url}/${id}`);  }
 
   save(products : any){
 
